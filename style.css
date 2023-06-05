@@ -1,13 +1,14 @@
 :root {
     --clr-neutral: rgb(255, 255, 255);
     --clr-primary: rgb(26, 146, 213);
+    --clr-primary-accent: rgb(83, 189, 246);
     --clr-accent: rgb(240, 180, 41);
     --clr-secondary: rgb(226, 232, 240);
 
     --ff-base: 'Roboto', sans-serif;
 
     --fw-regular: 300;
-    --fw-semi-bold: 400;
+    --fw-semi-bold: 500;
     --fw-bold: 700;
 
     --fs-200: 0.875rem;
@@ -33,7 +34,7 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: 400px 1fr;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 220px 1fr;
 
 }
 
@@ -56,6 +57,7 @@ body {
     grid-row: 2/3;
 }
 
+/* Side Bar */
 .logo {
     display: flex;
     padding: 1rem 1.5rem;
@@ -94,4 +96,108 @@ body {
 
 .nav-bar:last-child{
     margin-top: 5rem;
+}
+
+/* Header */
+.header {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 1.5rem;
+}
+
+.search {
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search div:first-child {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.search div:first-child span{
+    font-size: var(--fs-500);
+    padding: 1rem;
+}
+.search div:first-child input{
+    width: 70%;
+    height: 2rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--clr-secondary);
+}
+
+.search div:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.search div:last-child {
+    font-size: var(--fs-600);
+}
+.search div:last-child a{
+    text-decoration: none;
+    color: black;
+    font-size: var(--fs-500);
+    font-weight: var(--fw-semi-bold);
+}
+.search div:last-child img{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+}
+
+.profile {
+    padding: 0 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.profile img {
+    height: 5.5rem;
+    width: 5.5rem;
+    border-radius: 50%;
+}
+
+.profile div:first-child .greeting{
+    font-size: 1rem;
+    font-weight: var(--fw-semi-bold);
+}
+
+.profile div:first-child .user-name{
+    font-size: 1.75rem;
+    font-weight: var(--fw-semi-bold);
+}
+
+.profile .buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+.buttons button{
+    font-size: var(--fs-400);
+    font-weight: var(--fw-semi-bold);
+    width: 7rem;
+    height: 2.5rem;
+    padding: .25rem 1rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: var(--clr-primary);
+    color: var(--clr-neutral);
+    cursor: pointer;
+}
+.buttons button:hover, .buttons button:focus{
+    background-color: var(--clr-primary-accent);
 }
